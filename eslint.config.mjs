@@ -6,7 +6,7 @@ export default antfu(
     typescript: true,
   },
   {
-    ignores: ['*.js'],
+    ignores: ['*.js', '.vscode', 'node_modules', 'dist', 'LICENSE'],
   },
   {
     rules: {

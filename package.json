@@ -47,7 +47,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
-    "commit-msg": "npm commitlint --edit ${1}"
+    "commit-msg": "npx commitlint --edit ${1}"
   },
   "lint-staged": {
     "*": "eslint . --cache"

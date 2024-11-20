@@ -1,15 +1,15 @@
-import AutoImport from 'unplugin-auto-import/vite'
+import { fileURLToPath, URL } from 'node:url'
 import Vue from '@vitejs/plugin-vue'
-import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import AutoImport from 'unplugin-auto-import/vite'
 import ViteFonts from 'unplugin-fonts/vite'
 
 import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'node:url'
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineConfig({
   plugins: [
     AutoImport({
-      dts: '/src/shared/types/auto-import.d.ts'
+      dts: '/src/shared/types/auto-import.d.ts',
     }),
     Vue({
       template: { transformAssetUrls },
@@ -22,7 +22,7 @@ export default defineConfig({
     }),
     ViteFonts({
       google: {
-        families: [ {
+        families: [{
           name: 'Roboto',
           styles: 'wght@100;300;400;500;700;900',
         }],
