@@ -115,6 +115,9 @@ execute_with_spinner "📝 Updating project configuration..." "update_package_js
 # Initialize new git repository
 execute_with_spinner "🔧 Initializing new git repository..." "git init"
 
+# Install simple-git-hooks
+execute_with_spinner "🔧 Installing simple-git-hooks..." "npm run prepare"
+
 # Install dependencies
 print_message "\n📦 Installing dependencies using npm..."
 execute_with_spinner "Installing packages..." "npm install"
